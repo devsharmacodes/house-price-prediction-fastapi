@@ -8,7 +8,7 @@ from sklearn.linear_model import LinearRegression
 data = pd.read_csv("house_prices_practice.csv")
 
 # Features and target
-X = data[['GrLivArea']]
+X = data.drop(["SalePrice", "Id"], axis=1)
 y = data['SalePrice']
 
 # Train test split
